@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
   <div className="header__root">
     <div className="callout">
       <div className="left">
-        <p>I'm do freelancing!</p>
+        <p>I do freelancing!</p>
       </div>
       <div className="right">
         <a
