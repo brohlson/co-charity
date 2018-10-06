@@ -1,3 +1,55 @@
+@import '../../scss/index.scss';
+
 .header__root {
-    background: #333;
+
+    .callout {
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        @include gradient();
+        @include container();
+
+        .left,
+        .right {
+            display: flex;
+
+            align-items: center;
+
+            p,
+            a {
+                margin: 0;
+                color: white;
+            }
+        }
+
+
+    }
+
+    .links {
+        background: $colorGrey;
+        height: 60px;
+        display: flex;
+        @include container();
+
+        .icon {
+            display: flex;
+            align-items: center;
+            height: 60px;
+
+            img {
+                height: 45px;
+            }
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            height: 60px;
+
+            img {
+                width: 18px;
+                margin-left: 1rem;
+            }
+        }
+    }
 }

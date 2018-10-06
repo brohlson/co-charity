@@ -1,21 +1,28 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Block from '../components/Block'
 import { Helmet } from 'react-helmet'
 import _ from 'underscore'
-import '../scss/index.scss'
 
 class Index extends React.Component {
-  _renderLists = () => {
+  _renderBlocks = () => {
     let records = this.props.data.allAirtable.edges
-    return _.map(records, (record, index) => {
-      let { Name, Category, Icon, Link } = record.node.data
-      return (
-        <li key={index}>
-          {Name} <img width="20px" src={Icon[0].url} alt={Name} />
-        </li>
-      )
+    let arr = []
+    _.map(records, record => {
+      arr.push(record.node.data)
+    })
+    let groups = _.groupBy(arr, 'Category')
+    return _.map(groups, (group, index) => {
+      let title = group[0].Category
+      let blockProps = {
+        items: group,
+        key: index,
+        title,
+      }
+      return <Block {...blockProps} />
     })
   }
+
   render() {
     return (
       <Layout>
@@ -28,7 +35,7 @@ class Index extends React.Component {
             content="Best freelance tools for freelancers & web developers.  List curated by Chase Ohlson, a freelance web developer in Los Angeles."
           />
         </Helmet>
-        <ul>{this._renderLists()}</ul>
+        <div className="blocks__root">{this._renderBlocks()}</div>
       </Layout>
     )
   }
@@ -48,6 +55,7 @@ export const pageQuery = graphql`
               url
             }
             Category
+            Description
           }
         }
       }

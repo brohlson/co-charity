@@ -1,0 +1,91 @@
+@import '../../scss/index.scss';
+
+.block__root {
+    display: inline-block;
+    border-radius: 5px;
+    border-left: 2px solid #F27121;
+    border-right: 2px solid #8A2387;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+        @include gradient();
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+        color: white;
+        border-radius: 5px 5px 0 0;
+        @include gradient();
+
+        h2 {
+            margin: 0;
+            padding: 1rem 0;
+        }
+    }
+
+    .items {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            color: $colorGrey;
+        }
+
+        .item {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+
+
+            &:after {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                @include gradient();
+            }
+
+
+            .name {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                height: 60px;
+                padding-left: 10px;
+
+                h2 {
+                    margin: 0;
+                }
+
+                img {
+                    max-width: 30px;
+                    max-height: 100%;
+                    margin-right: 15px;
+                }
+            }
+
+
+            .icon {
+                padding-right: 10px;
+                justify-content: flex-end;
+            }
+
+            .description {
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
+    }
+}

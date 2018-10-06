@@ -1,0 +1,22 @@
+.blocks__root {
+    column-count: 3;
+    column-gap: 40px;
+    orphans: 1;
+    widows: 1;
+    margin: 2rem 0;
+
+    @include container();
+
+    @include tablet() {
+        column-count: 2;
+        column-gap: 20px;
+    }
+
+    @include mobile() {
+        column-count: 1;
+    }
+}
+
+img {
+    max-width: 100%;
+}
