@@ -30,6 +30,7 @@ class Index extends React.Component {
           <title>
             Best Freelance Tools | Web Development Tools by Chase Ohlson
           </title>
+          {/* <!-- TradeDoubler site verification 3062730 --> */}
           <meta
             name="description"
             content="Best freelance tools for freelancers & web developers.  List curated by Chase Ohlson, a freelance web developer in Los Angeles."
