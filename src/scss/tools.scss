@@ -6,6 +6,12 @@ $tablet: 900px;
 $desktop: 1200px;
 
 // Mixins
+@mixin desktop() {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
 @mixin tablet() {
     @media screen and (min-width: $mobile) and (max-width: $tablet) {
         @content;

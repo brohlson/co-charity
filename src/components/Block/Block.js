@@ -13,10 +13,17 @@ export default class Block extends React.Component {
   _renderBlockItems = () => {
     let { items } = this.props
     return _.map(items, (item, index) => {
-      let { Name, Description, Icon, Link } = item
-      let Url = Link + '?ref=chaseohlson'
+      let { Name, Description, Icon, Link, isAffiliate } = item
+      let AffLink = Link
+      let RelLink = Link + '?ref=chaseohlson'
+
       return (
-        <a key={index} href={Url}>
+        <a
+          key={index}
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+          href={isAffiliate ? AffLink : RelLink}
+        >
           <div className="item">
             <div className="name">
               <h2>

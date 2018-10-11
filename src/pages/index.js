@@ -56,6 +56,7 @@ export const pageQuery = graphql`
             }
             Category
             Description
+            isAffiliate
           }
         }
       }
