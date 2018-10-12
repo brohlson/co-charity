@@ -41,7 +41,7 @@
             border-radius: 5px;
             position: relative;
             top: 0px;
-            transition: all .3s ease-in-out;
+            @include transition(all .3s ease-in-out);
 
             @include desktop() {
                 &:hover {

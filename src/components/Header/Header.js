@@ -1,8 +1,6 @@
 import React from 'react'
 import Logo from '../../images/co-logo-white.svg'
-import FacebookIcon from '../../images/icon-facebook.svg'
 import TwitterIcon from '../../images/icon-twitter.svg'
-import InstagramIcon from '../../images/icon-instagram.svg'
 import GithubIcon from '../../images/icon-github.svg'
 import MailIcon from '../../images/icon-mail.svg'
 
