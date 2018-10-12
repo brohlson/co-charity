@@ -31,10 +31,6 @@ class Index extends React.Component {
             Best Freelance Tools | Web Development Tools by Chase Ohlson
           </title>
           <meta
-            name="verify"
-            content="<!-- TradeDoubler site verification 3062730 -->"
-          />
-          <meta
             name="description"
             content="Best freelance tools for freelancers & web developers.  List curated by Chase Ohlson, a freelance web developer in Los Angeles."
           />
@@ -61,6 +57,7 @@ export const pageQuery = graphql`
             Category
             Description
             isAffiliate
+            isFeatured
           }
         }
       }

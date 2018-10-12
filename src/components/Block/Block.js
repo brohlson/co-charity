@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'underscore'
 
+import First from '../../images/first.svg'
 import './Block.scss'
 
 export default class Block extends React.Component {
@@ -13,7 +14,7 @@ export default class Block extends React.Component {
   _renderBlockItems = () => {
     let { items } = this.props
     return _.map(items, (item, index) => {
-      let { Name, Description, Icon, Link, isAffiliate } = item
+      let { Name, Description, Icon, Link, isAffiliate, isFeatured } = item
       let AffLink = Link
       let RelLink = Link + '?ref=chaseohlson'
 
@@ -25,6 +26,9 @@ export default class Block extends React.Component {
           href={isAffiliate ? AffLink : RelLink}
         >
           <div className="item">
+            {isFeatured ? (
+              <img className="first" src={First} alt="Winner" />
+            ) : null}
             <div className="name">
               <h2>
                 <img src={Icon[0].url} alt={Name} />

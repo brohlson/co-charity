@@ -28,7 +28,6 @@ module.exports = {
             tableName: `Master`,
             tableView: `Main Grid`,
             queryName: `master`,
-            // tableLinks: [`Name`, `Link`, `Icon`, `Category`],
             mapping: { Attachments: `fileNode` },
           },
         ],
