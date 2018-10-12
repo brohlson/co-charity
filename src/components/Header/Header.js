@@ -29,14 +29,8 @@ const Header = ({ siteTitle }) => (
         <img src={Logo} alt="Logo" />
       </div>
       <div className="social">
-        <a href="https://www.facebook.com/chasejohlson" target="blank">
-          <img src={FacebookIcon} alt="Facebook" />
-        </a>
         <a href="https://twitter.com/_chaseohlson" target="blank">
           <img src={TwitterIcon} alt="Twitter" />
-        </a>
-        <a href="https://instagram.com/brohlson" target="blank">
-          <img src={InstagramIcon} alt="Instagram" />
         </a>
         <a href="https://github.com/brohlson" target="blank">
           <img src={GithubIcon} alt="Github" />
