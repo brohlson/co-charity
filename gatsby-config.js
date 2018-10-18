@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Chase Ohlson's Web Tools",
+    title: "Chase Ohlson's Charities",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -24,22 +24,29 @@ module.exports = {
         apiKey: `key31hXHeiUTuSBTh`, // may instead specify via env, see below
         tables: [
           {
-            baseId: `app6RAd5Wox2olcqi`,
-            tableName: `Master`,
-            tableView: `Main Grid`,
+            baseId: `app5iTpyvbwUvQek4`,
+            tableName: `Charities`,
+            tableView: `Main Grid View`,
+            queryName: `master`,
+            mapping: { Attachments: `fileNode` },
+          },
+          {
+            baseId: `app5iTpyvbwUvQek4`,
+            tableName: `Donations`,
+            tableView: `Main Grid View`,
             queryName: `master`,
             mapping: { Attachments: `fileNode` },
           },
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-127060116-1',
-        // Puts tracking script in the head instead of the body
-        head: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: 'UA-127060116-1',
+    //     // Puts tracking script in the head instead of the body
+    //     head: true,
+    //   },
+    // },
   ],
 }

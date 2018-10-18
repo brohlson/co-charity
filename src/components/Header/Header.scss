@@ -1,29 +1,12 @@
 @import '../../scss/index.scss';
 
 .header__root {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2000;
 
-    .callout {
-        height: 45px;
-        display: flex;
-        justify-content: space-between;
-        @include gradient();
-        @include container();
-
-        .left,
-        .right {
-            display: flex;
-
-            align-items: center;
-
-            p,
-            a {
-                margin: 0;
-                color: white;
-            }
-        }
-
-
-    }
 
     .links {
         background: $colorGrey;

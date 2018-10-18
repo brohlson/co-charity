@@ -8,20 +8,6 @@ import './Header.scss'
 
 const Header = ({ siteTitle }) => (
   <div className="header__root">
-    <div className="callout">
-      <div className="left">
-        <p>I do freelancing!</p>
-      </div>
-      <div className="right">
-        <a
-          href="https://chaseohlson.com"
-          target="blank"
-          className="btn__outline"
-        >
-          Hire Me
-        </a>
-      </div>
-    </div>
     <div className="links">
       <div className="icon">
         <img src={Logo} alt="Logo" />

@@ -1,3 +1,53 @@
 @import './tools.scss';
 @import './type.scss';
-@import './global.scss'
+@import './global.scss';
+
+.hero__root {
+    height: 400px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include container();
+
+    @include desktop() {
+        background-attachment: fixed;
+    }
+
+    .waves {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+    }
+
+    .overlay {
+        @include gradientGrey();
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        opacity: .8;
+        z-index: 0;
+
+
+    }
+
+    .content {
+        color: white;
+        position: relative;
+        z-index: 1;
+
+        p {
+            font-size: 18px;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
