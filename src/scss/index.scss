@@ -32,17 +32,19 @@
         bottom: -1px;
         left: 0;
         width: 100%;
+        @include fadeInUp($duration: .5s);
     }
 
     .overlay {
         @include gradientGrey();
+        @include fadeInGradient($duration: .5s);
         position: absolute;
         height: 100%;
         width: 100%;
         left: 0;
         top: 0;
-        opacity: .8;
         z-index: 0;
+        opacity: .8 !important;
 
         &.girls-who-code {
             @include gradientGirls();
@@ -54,6 +56,7 @@
         position: relative;
         z-index: 1;
         @include container();
+        @include fadeInUp($duration: .5s);
 
         p {
             font-size: 18px;
