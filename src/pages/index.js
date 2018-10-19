@@ -52,9 +52,10 @@ class Index extends React.Component {
     return _.map(records, (record, index) => {
       if (record.node.data.Type === 'Charity') {
         let { Name } = record.node.data
-        let slug = Name.replace(/ /g, '-')
-          .replace(/[,&]/g, '')
-          .toLowerCase()
+        let slug =
+          Name.replace(/ /g, '-')
+            .replace(/[,&]/g, '')
+            .toLowerCase() + '/'
         return (
           <li key={index}>
             <Link to={slug}>{Name}</Link>
