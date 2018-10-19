@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import { Helmet } from 'react-helmet'
 import Background from '../images/hero-bg-min.jpg'
@@ -46,6 +47,23 @@ class Index extends React.Component {
     )
   }
 
+  _renderBlocks = () => {
+    let records = this.props.data.allAirtable.edges
+    return _.map(records, (record, index) => {
+      if (record.node.data.Type === 'Charity') {
+        let { Name } = record.node.data
+        let slug = Name.replace(/ /g, '-')
+          .replace(/[,&]/g, '')
+          .toLowerCase()
+        return (
+          <li key={index}>
+            <Link to={slug}>{Name}</Link>
+          </li>
+        )
+      }
+    })
+  }
+
   render() {
     return (
       <Layout>
@@ -59,6 +77,7 @@ class Index extends React.Component {
           />
         </Helmet>
         {this._renderHero()}
+        <div className="links">{this._renderBlocks()}</div>
       </Layout>
     )
   }
