@@ -1,31 +1,17 @@
 import React from 'react'
 import Layout from '../components/layout'
-import Block from '../components/Block'
 import { Helmet } from 'react-helmet'
-import { formatDollars } from './helpers'
 import Background from '../images/hero-bg-min.jpg'
 import Waves from '../images/waves.svg'
 import _ from 'underscore'
 
-class Index extends React.Component {
-  // _renderBlocks = () => {
-  //   let records = this.props.data.allAirtable.edges
-  //   let arr = []
-  //   _.map(records, record => {
-  //     arr.push(record.node.data)
-  //   })
-  //   let groups = _.groupBy(arr, 'Category')
-  //   return _.map(groups, (group, index) => {
-  //     let title = group[0].Category
-  //     let blockProps = {
-  //       items: group,
-  //       key: index,
-  //       title,
-  //     }
-  //     return <Block {...blockProps} />
-  //   })
-  // }
+let formatDollars = raw => {
+  let formatted = parseInt(raw) / 100
+  let string = '$' + formatted
+  return string
+}
 
+class Index extends React.Component {
   _renderHero = () => {
     let donations = 0
     let total = 0

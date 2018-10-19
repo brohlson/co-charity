@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://co-tools.netlify.com/* https://tools.chaseohlson.com/:splat 301!
