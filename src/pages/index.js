@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Helmet } from 'react-helmet'
-import { Link } from 'gatsby'
 import Background from '../images/hero-bg-min.jpg'
 import Waves from '../images/waves.svg'
 import _ from 'underscore'
@@ -42,7 +41,6 @@ class Index extends React.Component {
             Together, we've made <span>{donations}</span> donations totalling{' '}
             <span>{formatDollars(total)}</span>
           </p>
-          <Link to="/girls-who-code">Rainn</Link>
         </div>
       </div>
     )
