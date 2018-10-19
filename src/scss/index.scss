@@ -11,10 +11,20 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    @include container();
 
     @include desktop() {
         background-attachment: fixed;
+    }
+
+    @include mobile() {
+        height: calc(100vh - 65px);
+
+        .content {
+
+            h1 {
+                font-size: 28px;
+            }
+        }
     }
 
     .waves {
@@ -41,12 +51,16 @@
         color: white;
         position: relative;
         z-index: 1;
+        @include container();
 
         p {
             font-size: 18px;
 
             span {
                 font-weight: bold;
+                background: #222222;
+                padding: 4px 4px 1px 4px;
+                border-radius: 2px;
             }
         }
     }

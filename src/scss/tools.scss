@@ -55,6 +55,9 @@ $desktop: 1200px;
 
 @mixin container() {
     padding: 0 40px;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
 
     @include tablet() {
         padding: 0 20px;
