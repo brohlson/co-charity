@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1024px" height="56px" viewBox="0 0 1024 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Path</title>
-    <desc>Created with Sketch.</desc>
+<svg width="1024px" height="69px" viewBox="0 0 1024 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop" transform="translate(0.000000, -312.000000)" fill="#FFFFFF">
-            <polygon id="Path" points="5.68434189e-14 368 5.68434189e-14 324.090909 263 346.045455 640 312 886 340 1024 312 1024 368"></polygon>
+        <g id="Desktop" transform="translate(0.000000, -309.000000)" fill="#FFFFFF">
+            <polygon id="Path" points="0 378 0 362 101 336 353 357 621 309 762 343.5 910 322 1024 357 1024 378"></polygon>
         </g>
     </g>
 </svg>
