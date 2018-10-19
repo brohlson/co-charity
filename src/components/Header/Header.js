@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Logo from '../../images/co-logo-white.svg'
 import TwitterIcon from '../../images/icon-twitter.svg'
 import GithubIcon from '../../images/icon-github.svg'
@@ -10,7 +11,9 @@ const Header = ({ siteTitle }) => (
   <div className="header__root">
     <div className="links">
       <div className="icon">
-        <img src={Logo} alt="Logo" />
+        <Link to="/">
+          <img src={Logo} alt="Logo" />
+        </Link>
       </div>
       <div className="social">
         <a href="https://twitter.com/ChaseOhlsonWeb" target="blank">
