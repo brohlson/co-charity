@@ -13,8 +13,11 @@ export default class CharityTemplate extends React.Component {
       .replace(/ /g, '-')
       .replace(/[,&]/g, '')
       .toLowerCase()
-    const style = {
-      backgroundImage: `url(${image[0].url})`,
+    let style
+    if (image !== null) {
+      style = {
+        backgroundImage: `url(${image[0].url})`,
+      }
     }
 
     return (
