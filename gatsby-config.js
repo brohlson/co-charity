@@ -4,7 +4,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
     'gatsby-plugin-sass',
     {
       resolve: `gatsby-plugin-manifest`,
@@ -27,14 +26,14 @@ module.exports = {
             baseId: `app5iTpyvbwUvQek4`,
             tableName: `Charities`,
             tableView: `Main Grid View`,
-            queryName: `master`,
+            queryName: `charities`,
             mapping: { Attachments: `fileNode` },
           },
           {
             baseId: `app5iTpyvbwUvQek4`,
             tableName: `Donations`,
             tableView: `Main Grid View`,
-            queryName: `master`,
+            queryName: `donations`,
             mapping: { Attachments: `fileNode` },
           },
         ],
