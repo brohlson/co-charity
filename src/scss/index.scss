@@ -17,7 +17,7 @@
     }
 
     @include mobile() {
-        height: calc(100vh - 65px);
+        height: 475px;
 
         .content {
 
