@@ -26,7 +26,7 @@ class Index extends React.Component {
     })
 
     const style = {
-      backgroundImage: `url(${Background})`,
+      background: `url(${Background})`,
     }
 
     return (
