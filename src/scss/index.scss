@@ -8,13 +8,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center center !important;
     position: relative;
 
-    @include desktop() {
-        background-attachment: fixed;
-    }
 
     @include mobile() {
         height: 475px;
@@ -31,7 +28,7 @@
         bottom: -1px;
         left: 0;
         width: 100%;
-        @include fadeInUp($duration: 0.5s);
+        @include slideInUp($duration: 0.5s);
     }
 
     .overlay {

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import { Helmet } from 'react-helmet'
 import Background from '../images/hero-bg-min.jpg'
 import Waves from '../images/waves.svg'
+import Block from '../components/Block'
 import _ from 'underscore'
 
 let formatDollars = raw => {
@@ -36,7 +36,7 @@ class Index extends React.Component {
         <div className="content">
           <h1>
             When you work with me on a freelance project, part of your
-            downpayment will go to support one of these organizations.
+            downpayment will go to support one of these organizations:
           </h1>
           <p>
             Together, we've made <span>{donations}</span> donations totalling{' '}
@@ -51,15 +51,19 @@ class Index extends React.Component {
     let records = this.props.data.allAirtable.edges
     return _.map(records, (record, index) => {
       if (record.node.data.Type === 'Charity') {
-        let { Name } = record.node.data
+        let { Name, bioShort, Image } = record.node.data
         let slug =
           Name.replace(/ /g, '-')
             .replace(/[,&]/g, '')
             .toLowerCase() + '/'
         return (
-          <li key={index}>
-            <Link to={slug}>{Name}</Link>
-          </li>
+          <Block
+            key={index}
+            title={Name}
+            bio={bioShort}
+            img={Image}
+            slug={slug}
+          />
         )
       }
     })
@@ -78,7 +82,7 @@ class Index extends React.Component {
           />
         </Helmet>
         {this._renderHero()}
-        <div className="links">{this._renderBlocks()}</div>
+        <div className="blocks__root">{this._renderBlocks()}</div>
       </Layout>
     )
   }
@@ -95,6 +99,10 @@ export const pageQuery = graphql`
             Type
             Name
             Amount
+            bioShort
+            Image {
+              url
+            }
           }
         }
       }
