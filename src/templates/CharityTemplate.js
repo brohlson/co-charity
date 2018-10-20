@@ -25,9 +25,11 @@ export default class CharityTemplate extends React.Component {
     return (
       <div className="hero__root" style={style}>
         <div className={`overlay ${cname}`} />
-        <Link className="back" to="/">
-          <img src={Back} alt="Back" />
-        </Link>
+        <div className="back">
+          <Link to="/">
+            <img src={Back} alt="Back" />
+          </Link>
+        </div>
         <img src={Waves} alt="Waves" className="waves" />
         <div className="content">
           <h1>{name}</h1>
