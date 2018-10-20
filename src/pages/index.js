@@ -35,11 +35,11 @@ class Index extends React.Component {
         <img src={Waves} alt="Waves" className="waves" />
         <div className="content">
           <h1>
-            When you work with me on a freelance project, part of your
+            When you work with me on a freelance dev project, part of your
             downpayment will go to support one of these organizations:
           </h1>
           <p>
-            Together, we've made <span>{donations}</span> donations totalling{' '}
+            To date, we've made <span>{donations}</span> total donations worth{' '}
             <span>{formatDollars(total)}</span>
           </p>
         </div>
