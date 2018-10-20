@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import LinkIcon from '../../images/link.svg'
 
 import './Block.scss'
 
@@ -26,6 +27,7 @@ export default class Block extends React.Component {
         <div className="wrap">
           <div style={style} className="image">
             <div className={`overlay`} />
+            <img class="icon" src={LinkIcon} alt="Link" />
           </div>
           <div className={`title`}>
             <h2>{title}</h2>

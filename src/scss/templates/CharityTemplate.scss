@@ -4,6 +4,14 @@
     margin-top: 60px;
 
     .hero__root {
+        .back {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            width: 40px;
+            @include fadeInUp($duration: 0.5s);
+        }
+
         .content {
             text-align: center;
         }

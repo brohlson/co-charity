@@ -1,7 +1,9 @@
 import React from 'react'
 import Layout from '../components/layout'
+import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Waves from '../images/waves.svg'
+import Back from '../images/back.svg'
 
 import '../scss/templates/CharityTemplate.scss'
 
@@ -23,6 +25,9 @@ export default class CharityTemplate extends React.Component {
     return (
       <div className="hero__root" style={style}>
         <div className={`overlay ${cname}`} />
+        <Link className="back" to="/">
+          <img src={Back} alt="Back" />
+        </Link>
         <img src={Waves} alt="Waves" className="waves" />
         <div className="content">
           <h1>{name}</h1>

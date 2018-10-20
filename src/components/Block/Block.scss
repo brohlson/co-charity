@@ -110,6 +110,15 @@
             background-position: center;
             position: relative;
 
+            .icon {
+                width: 30px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 200;
+                ;
+            }
+
             .overlay {
                 position: absolute;
                 height: 100%;
