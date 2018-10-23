@@ -8,8 +8,10 @@ import _ from 'underscore'
 
 let formatDollars = raw => {
   let formatted = parseInt(raw) / 100
-  let string = '$' + formatted
-  return string
+  return formatted.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  })
 }
 
 class Index extends React.Component {
