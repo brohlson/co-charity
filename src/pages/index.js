@@ -5,14 +5,7 @@ import Background from '../images/hero-bg-min.jpg'
 import Waves from '../images/waves.svg'
 import Block from '../components/Block'
 import _ from 'underscore'
-
-let formatDollars = raw => {
-  let formatted = parseInt(raw) / 100
-  return formatted.toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  })
-}
+import { formatDollars } from '../util/helpers'
 
 class Index extends React.Component {
   _renderHero = () => {

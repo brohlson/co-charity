@@ -34,6 +34,8 @@ exports.createPages = ({ graphql, actions }) => {
                     Name
                     Link
                     bioLong
+                    bioShort
+                    bioHeading
                     Image {
                       url
                     }
@@ -62,7 +64,9 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               name: edge.node.data.Name,
               link: edge.node.data.Link,
+              heading: edge.node.data.bioHeading,
               bio: edge.node.data.bioLong,
+              desc: edge.node.data.bioShort,
               image: edge.node.data.Image,
             },
           })

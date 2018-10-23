@@ -39,6 +39,7 @@ module.exports = {
             tableView: `Main Grid View`,
             queryName: `donations`,
             mapping: { Attachments: `fileNode` },
+            tableLinks: [`Charity`],
           },
         ],
       },
