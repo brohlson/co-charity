@@ -29,10 +29,11 @@ class Index extends React.Component {
         <div className="overlay" />
         <img src={Waves} alt="Waves" className="waves" />
         <div className="content">
-          <h1>
+          <h1>Chase Ohlson's Charities</h1>
+          <h2>
             When you work with me on a freelance dev project, part of your
             downpayment will go to support one of these organizations:
-          </h1>
+          </h2>
           <p>
             Since October 2018, we've made <span>{donations}</span> total
             donations worth <span>{formatDollars(total)}</span>
