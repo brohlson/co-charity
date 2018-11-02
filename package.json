@@ -12,6 +12,7 @@
     "gatsby-plugin-postcss": "^2.0.0",
     "gatsby-plugin-postcss-sass": "^1.0.22",
     "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-robots-txt": "^1.3.0",
     "gatsby-plugin-sass": "^2.0.1",
     "gatsby-plugin-sitemap": "^2.0.2",
     "gatsby-source-airtable": "^2.0.1",
