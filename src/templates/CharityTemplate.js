@@ -133,7 +133,9 @@ export default class CharityTemplate extends React.Component {
                 <div className={`heading ${cname}`}>
                   <h2>Donation History</h2>
                 </div>
-                <div className="don__items">{this._renderDonations()}</div>
+                <div className={`don__items ${cname}`}>
+                  {this._renderDonations()}
+                </div>
               </div>
             </div>
           </div>

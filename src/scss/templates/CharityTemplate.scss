@@ -91,7 +91,23 @@
 
             .don__items {
 
+                padding: 5px;
 
+                &.girls-who-code {
+                    @include gradientGirls();
+                }
+
+                &.fight-for-the-forgotten {
+                    @include gradientFight();
+                }
+
+                &.susan-g-komen {
+                    @include gradientSusan();
+                }
+
+                &.rainn {
+                    @include gradientRainn();
+                }
 
                 p {
                     margin: 0;
@@ -100,14 +116,20 @@
                 a {
                     color: #222;
                     font-style: italic;
+                    text-decoration: underline;
                 }
 
                 .item {
-                    background: rgba(34, 34, 34, 0.1);
+                    background: white;
                     padding: 1rem;
+                    margin-bottom: 5px;
 
                     &:nth-child(2) {
                         background: white;
+                    }
+
+                    &:last-child {
+                        margin: 0;
                     }
                 }
 
