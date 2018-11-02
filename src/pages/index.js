@@ -34,8 +34,8 @@ class Index extends React.Component {
             downpayment will go to support one of these organizations:
           </h1>
           <p>
-            To date, we've made <span>{donations}</span> total donations worth{' '}
-            <span>{formatDollars(total)}</span>
+            Since October 2018, we've made <span>{donations}</span> total
+            donations worth <span>{formatDollars(total)}</span>
           </p>
         </div>
       </div>
