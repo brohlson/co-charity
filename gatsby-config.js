@@ -5,10 +5,12 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: "Chase Ohlson's Charities",
+    siteUrl: `https://chaseohlson.org`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {

@@ -13,6 +13,7 @@
     "gatsby-plugin-postcss-sass": "^1.0.22",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
+    "gatsby-plugin-sitemap": "^2.0.2",
     "gatsby-source-airtable": "^2.0.1",
     "gatsby-source-filesystem": "^2.0.2",
     "moment": "^2.22.2",
